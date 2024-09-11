@@ -8,18 +8,15 @@ This project demonstrates how to deploy a simple Clojure web application using K
   ```
   brew install --cask docker
   ```
-
 - Clojure and Leiningen
   ```
   brew install clojure
   brew install leiningen
   ```
-
 - kubectl command-line tool
- ```
+  ```
   brew install kubectl
   ```
-
 
 ## Project Structure
 
@@ -31,12 +28,7 @@ This project demonstrates how to deploy a simple Clojure web application using K
 
 ## Getting Started
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd clojure-k8s-demo
-   ```
-
+1. Clone the repository
 2. Build the Docker image:
    ```
    docker build -t clojure-k8s-demo:v1 .
@@ -47,13 +39,13 @@ This project demonstrates how to deploy a simple Clojure web application using K
    kubectl apply -f deployment.yaml
    kubectl apply -f service.yaml
    ```
-
+  
 4. Verify the deployment:
    ```
    kubectl get pods
    kubectl get services
    ```
-
+  
 5. Test the application:
    ```
    curl localhost
@@ -73,7 +65,8 @@ kubectl scale deployment clojure-k8s-demo --replicas=5
    ```
    docker build -t clojure-k8s-demo:v2 .
    ```
-3. Update the `deployment.yaml` file with the new image tag
+  
+3. Update the `deployment.yaml` file with the new image tag:
    ```
    ...
    spec:
@@ -90,6 +83,11 @@ kubectl scale deployment clojure-k8s-demo --replicas=5
    ```
    kubectl apply -f deployment.yaml
    ```
+   
+- You can also check the images created:
+  ```
+  docker images | grep clojure-k8s-demo
+  ```
 
 ## Troubleshooting
 
