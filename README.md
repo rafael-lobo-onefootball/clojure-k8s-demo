@@ -8,11 +8,6 @@ This project demonstrates how to deploy a simple Clojure web application using K
   ```
   brew install --cask docker
   ```
-- Clojure and Leiningen
-  ```
-  brew install clojure
-  brew install leiningen
-  ```
 - kubectl command-line tool
   ```
   brew install kubectl
